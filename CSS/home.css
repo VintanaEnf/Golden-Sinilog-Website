@@ -193,6 +193,5 @@ body{
 #loginbutton{
     border: none;
     background-color: rgba(0, 0, 0, 0);
-    min-height:0px; 
-    min-width: 0px;
+    margin-right: 10px;
 }
