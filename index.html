@@ -6,18 +6,28 @@
         <link rel = "stylesheet" href = "./CSS/home.css">
     </head>
     <body>
-        <nav class = "navbar navbar-expand-lg bg-body-tertiary">
-            <h1 class = "navbar-brand">Golden Sinilog</h1>
-            <button id = "HomeB">Home</button>
-            <button id = "AboutB">About us</button>
-            <button id = "LoginB">Login</button>
-            <button id = "orderB">Order Now</button>
+
+        <nav class = "flexnav">
+            <div id = start-button>
+                <div>
+                    <img src="./IMAGES/general/logo.png" alt="Logo" width="200" height="80" class="d-inline-block align-text-top">
+                </div>
+                <div>
+                    <a class="nav-link active" href="#" id = "HomeNavButton">Home</a>
+                </div>
+                <div>
+                    <a class="nav-link active" href="#" id = "AboutUsButton">About Us</a>
+                </div>
+            </div>
+            <div id = "end-button">
+                <button class="btn btn-outline-success" type="submit">Login</button>
+                <button class="btn btn-outline-success" type="submit">Order Now</button>
+            </div>
         </nav>
 
-        
-        <div class = "Main">
-        <h2>Bold flavors, unforgettable experiences: welcome to Sinilog paradise.</h2>
-        <p>Welcome to our Sinilog sanctuary, where tradition meets innovation in every flavorful bite. Indulge in the artistry of Filipino cuisine, crafted with passion and authenticity. Join us on a journey of culinary delight, where each dish tells a story of tradition and taste.</p>
+        <div class = "MainText">
+        <h2><u><b>Bold flavors, unforgettable experiences:</b> welcome to <b>Sinilog</b> paradise.</u></h2>
+        <p id = "paragraphWelcome">Welcome to our Sinilog sanctuary, where tradition meets innovation in every flavorful bite. Indulge in the artistry of Filipino cuisine, crafted with passion and authenticity. Join us on a journey of culinary delight, where each dish tells a story of tradition and taste.</p>
         </div>
     </body>
 

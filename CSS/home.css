@@ -1,0 +1,47 @@
+.flexnav{
+    display: flex;
+    justify-content: space-between;
+    background-color: brown;
+}
+#start-buttonn{
+    justify-content: start;
+}
+
+#end-button{
+    justify-content: end;
+}
+
+
+#LoginB{
+    position: absolute;
+    right:8%;
+}
+
+#OrderB{
+    position: absolute;
+    right: 5px;
+}
+
+.MainText{
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+#paragraphWelcome{
+    margin: auto;
+    margin-top: 20px;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+}
+
+body{
+    background-image: url('../IMAGES/general/BrownWood.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
