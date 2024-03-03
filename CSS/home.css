@@ -190,8 +190,9 @@ body{
     justify-content: space-between;
 }
 
-#loginbutton{
+.loginbutton{
     border: none;
     background-color: rgba(0, 0, 0, 0);
     margin-right: 10px;
+    min-width: 80px;
 }
