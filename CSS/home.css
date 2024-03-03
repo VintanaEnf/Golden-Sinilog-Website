@@ -55,6 +55,12 @@ h3{
     margin-bottom:0;
 }
 
+.fancytext{
+    font-family: rastanty;
+    font-size:40px;
+    margin-top: 0;
+    margin-bottom:0;
+}
 
 .flexnav{
     display: flex;
@@ -122,8 +128,9 @@ h3{
 
 #paragraphWelcome{
     margin: auto;
+    font-size: 15;
     margin-top: 5px;
-    width: 60%;
+    width: 50%;
     padding: 10px;
     text-align: center;
 }
@@ -137,7 +144,7 @@ body{
 }
 
 .FoodDisplays{
-    margin-top: 20px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,6 +163,10 @@ body{
     padding-bottom: 40px;
     background-color: rgba(0, 0, 0, 0.5);
     margin-right: 20px;
+}
+
+.FoodImages{
+    margin-top: -20px;
 }
 
 .price{
@@ -185,7 +196,7 @@ body{
 }
 
 .bottomPriceCart{
-    margin-top: 60;
+    margin-top: 45px;
     display: flex;
     justify-content: space-between;
 }
