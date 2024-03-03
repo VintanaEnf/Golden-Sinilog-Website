@@ -30,7 +30,7 @@ button {
 }
 
 button:hover {
-    background-color: white;
+    background-color: #9e765b;
     transition: 0.7s;
 }
 
@@ -137,7 +137,7 @@ body{
 }
 
 .FoodDisplays{
-    margin-top: 100px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,4 +195,17 @@ body{
     background-color: rgba(0, 0, 0, 0);
     margin-right: 10px;
     min-width: 80px;
+}
+
+.footer{
+    margin-top: 5%;
+    color: #858585;
+    text-align: center;
+}
+
+.footerLinks{
+    color: #858585;
+    text-align: center;
+    margin-right: 1%;
+    margin-left: 1%;
 }
