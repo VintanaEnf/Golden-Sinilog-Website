@@ -1,0 +1,87 @@
+{% load static %}
+<html>
+    <head>
+        <title>Golden Sinilog Home</title>
+        <link rel="icon" type="images/x-icon" href="{% static 'IMAGES/general/Gred.png' %}">
+        <link rel = "stylesheet" href = "{% static 'temp.css' %}">
+    </head>
+    <body>
+        <header>
+        <nav>
+          
+            <img class="navlogo navleft" src="{% static './IMAGES/general/logo_nomargin.png' %}" alt="Logo" width="206" height="64">
+            <a class="navlink navleft" href="#">Home</a>
+            <a class="navlink navleft" href="#">About Us</a>
+              
+
+            <button class="navlink navright order_Button" type="submit">Order Now</button>
+            <button class="navlink navright" type="submit">Register</button>
+            <button class="navlink navright" type="submit">Login</button>
+            
+        </nav>
+        </header>   
+
+        <section class="main-container">
+            <div class="container">
+
+
+                <h4 class="text"><b>Bold flavors, unforgettable experiences:</b> welcome to <b>Sinilog</b> paradise.</h4>
+                <img src="{% static 'IMAGES/general/WhiteLine.png' %}" alt="Logo" width="900" height="2" >
+                <p class="text" style="width: 50%;">Welcome to our Sinilog sanctuary, where tradition meets innovation in every flavorful bite. Indulge in the artistry of Filipino cuisine, crafted with passion and authenticity. Join us on a journey of culinary delight, where each dish tells a story of tradition and taste.</p>
+            
+
+                <!-- Food Display -->
+                <div class = "Food-Display container">
+                    <div class = "Food" id = "Golden Liempo">
+                        <img src="{% static 'IMAGES/home/liempoOrtho.png' %}" alt="Image of a Liempsilog" class="FoodImages" width="200" height="200">
+                        <div class = "fancytext">Golden Liempo</div>
+                        <div class = "bottomPriceCart">
+                            <p class = "price">Price:120PHP</p>
+                            <button class="shopnow"><img src="{% static 'IMAGES/home/ShoppingCart.png' %}" alt="Logo" width="16" height="16"></button>
+                        </div>
+                    </div>
+
+                    <div class = "Food" id = "Golden Tapa">
+                        <img src="{% static 'IMAGES/home/tapaOrtho.png' %}" alt="Image of a Tapsilog" class="FoodImages" width="200" height="200">
+                        <div class = "fancytext">Golden Tapa</div>
+                        <div class = "bottomPriceCart">
+                            <p class = "price">Price:120PHP</p>
+                            <button class="shopnow"><img src="{% static 'IMAGES/home/ShoppingCart.png' %}" alt="Logo" width="16" height="16"></button>
+                        </div>
+                    </div>
+
+                    <div class = "Food" id = "Golden Chicken">
+                        <img src="{% static 'IMAGES/home/chickenOrtho.png' %}" alt="Image of a Chicksilog" class="FoodImages" width="200" height="200">
+                        <div class = "fancytext">Golden Chicksilog</div>
+                        <div class = "bottomPriceCart">
+                            <p class = "price">Price:130PHP</p>
+                            <button class="shopnow"><img src="{% static 'IMAGES/home/ShoppingCart.png' %}" alt="Logo" width="16" height="16"></button>
+                        </div>
+                    </div>
+
+                    <div class = "Food" id = "Golden Bangus">
+                        <img src="{% static 'IMAGES/home/bangusOrtho.png' %}" alt="Image of a Daingsilog" class="FoodImages" width="200" height="200">
+                        <div class = "fancytext">Golden Bangus</div>
+                        <div class = "bottomPriceCart">
+                            <p class = "price">Price:120PHP</p>    
+                            <button class="shopnow"><img src="{% static 'IMAGES/home/ShoppingCart.png' %}" alt="Logo" width="16" height="16"></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Food Display -->
+
+                
+                <div class="footer-container">
+                    <p class="text footer">Located at B5 L6 PH4L MAIN ROAD GOLDEN CITY STA ROSA LAGUNA.</p>
+                    <p class="text footer" >Copyright © 2024 Golden Sinilog, All rights reserved.</p>
+                    <a class="footer" href="#">Privacy Policy</a>
+                    <a class="footer" href="#">Terms of Use</a>
+                </div>
+            </div>
+        </section>
+            
+
+
+
+    </body>
+</html>
