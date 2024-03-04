@@ -1,0 +1,215 @@
+@font-face {
+    font-family: aotf;
+    src: url(../FONTS/AOTFShinGoProMedium.otf);
+}
+
+@font-face {
+    font-family: rastanty;
+    src: url(../FONTS/Rastanty\ Cortez.otf);
+}
+
+@font-face {
+    font-family: phagspa;
+    src: url(../FONTS/phagspa.ttf);
+}
+
+@font-face {
+    font-family: univers;
+    src: url(../FONTS/UniversLTStd.otf);
+}
+
+*{
+	margin: 0px 0px;
+	box-sizing: 0px;
+}
+
+.nav_img{
+	margin-top: 10px;
+}
+
+nav{
+	display: inline;
+    justify-content: space-between;
+    background-color: #C00000;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0px;	
+}
+
+footer{
+    justify-content: space-between;
+}
+
+button {
+     
+	border: none;
+    background-color: rgba(0, 0, 0, 0);
+    min-width: 80px;
+    min-height:20px;
+    padding: 10px 10px; 
+    margin: auto;
+    font-family: aotf;
+    color: white;
+}
+
+button:hover {
+    background-color: #9e765b;
+    transition: 0.7s;
+}
+
+button:active {
+    background-color: #5f0c0c;
+}
+
+.order_Button{
+	background-color:#843C0C;
+    color: #fff;
+    border:2px solid #af734b; 
+    border-radius:5px;
+}
+
+
+.navleft{
+	float:left;
+}
+
+.navright{
+	float:right;
+}
+
+.navlink{
+	margin-top: 12px;
+	padding-top: 5px;
+	margin-left: 5px;
+	margin-right: 15px;
+}
+
+.navlogo{
+	float:left;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+.tagline_underline{
+	margin-top: 0px;	
+}
+
+.text{
+	color:white;
+	margin: auto;
+	text-align: center;
+}
+
+
+.main-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	margin-top: 20%;
+}
+
+.container{
+	display: block;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	margin: 10px 10px;
+}
+
+h4{
+    font-family: univers;
+    font-size:30px;
+}
+
+
+em{
+	text-decoration: underline;
+}
+
+a{
+    text-decoration:none;
+    font-family: aotf;
+    color: white;
+}
+
+h1{
+	font-family: univers;
+    font-size:50px;
+    padding: 10px;
+}
+
+p{
+	font-size: 15;
+    margin-top: 5px;
+    padding: 10px;
+    font-family: aotf;
+}
+
+body{
+    background-image: url('../IMAGES/general/BrownWood.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+}
+
+.fancytext{
+    font-family: rastanty;
+    font-size:40px;
+    margin-top: 0;
+    margin-bottom:0;
+}
+
+.Food{
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+}
+
+.FoodImages{
+    margin-top: -20px;
+}
+
+.price{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.shopnow {
+    margin-top: 7px;
+    background-color:#843C0C;
+    color: #fff;
+    border:2px solid #af734b; 
+    border-radius:5px; 
+    padding:5px;
+    min-height:20px; 
+    min-width: 50px;
+    font-family: aotf;
+}
+
+.bottomPriceCart{
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-container{
+	margin-top: 50px;
+}
+
+.footer{
+	color: #858585;
+}
