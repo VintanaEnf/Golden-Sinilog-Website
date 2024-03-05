@@ -94,6 +94,7 @@ h3{
 .container-background{
     width: 90%;
     height: 500px;
+    border-radius: 10%;
     margin: 0px 50px;
     background-color: rgba(83,69,53, 0.5);
 }
