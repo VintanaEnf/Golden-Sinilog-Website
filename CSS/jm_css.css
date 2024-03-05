@@ -56,7 +56,7 @@ p{
     font-family: aotf;
 }
 
-h3{
+h1{
     font-family: rastanty;
     font-size:40px;
     margin-top: 0;
@@ -82,8 +82,16 @@ h3{
     min-width: 80px;
 }
 
-.container{
+.main_container{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.container{
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -93,10 +101,10 @@ h3{
 
 .container-background{
     width: 90%;
-    height: 500px;
+    height: 550px;
     border-radius: 10%;
     margin: 0px 50px;
-    background-color: rgba(83,69,53, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .white-text{
