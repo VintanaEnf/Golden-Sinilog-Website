@@ -18,6 +18,12 @@
     src: url(../FONTS/UniversLTStd.otf);
 }
 
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    box-sizing: 0px;
+}
+
 body{
     background-image: url('../IMAGES/general/BrownWood.jpg');
     background-repeat: no-repeat;
@@ -74,4 +80,25 @@ h3{
     background-color: rgba(0, 0, 0, 0);
     margin-right: 10px;
     min-width: 80px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.container-background{
+    width: 90%;
+    height: 500px;
+    margin: 0px 50px;
+    background-color: rgba(83,69,53, 0.5);
+}
+
+.white-text{
+    color: white;
+
 }
