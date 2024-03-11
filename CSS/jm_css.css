@@ -54,6 +54,8 @@ button:active {
 
 p{
     font-family: aotf;
+    margin: 40px;
+    font-size: 20px;
 }
 
 h1{
@@ -101,7 +103,7 @@ h1{
 
 .container-background{
     width: 90%;
-    height: 550px;
+    height: 100%;
     border-radius: 10%;
     margin: 0px 50px;
     background-color: rgba(0, 0, 0, 0.5);
