@@ -55,7 +55,7 @@ button:active {
 p{
     font-family: aotf;
     margin: 40px;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 h1{
@@ -109,7 +109,7 @@ h2{
 .container-background{
     width: 90%;
     height: 100%;
-    border-radius: 3%;
+    border-radius: 10%;
     margin: 0px 50px;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -121,4 +121,10 @@ h2{
 
 .larger-size{
     font-size: 50px;
+}
+
+a{
+    color: white;
+    font-size: 50px;
+        
 }

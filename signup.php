@@ -76,10 +76,7 @@
         <form action="">
           <h1 id="heading">Create new Account</h1>
           <div class="input-box">
-            <input type="text" placeholder="First Name" required />
-          </div>
-          <div class="input-box">
-            <input type="text" placeholder="Last Name" required />
+            <input type="text" placeholder="Name" required />
           </div>
           <div class="input-box">
             <input type="text" placeholder="Email" required />

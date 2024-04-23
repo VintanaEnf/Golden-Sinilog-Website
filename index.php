@@ -24,8 +24,9 @@
                 </div>
             </div>
             <div id = "end-button">
-                <button class = "loginbutton" type="submit" href="SignIn.php">Login</button>
-                <button class = "loginbutton" type="submit" href="signup.php">Sign Up</button>
+                <button onclick="window.location.href = 'http://localhost/Golden_Sinilog/SignIn.php'"class = "loginbutton" type="submit" href="SignIn.php">Login</button>
+                <button 
+                onclick="window.location.href = 'http://localhost/Golden_Sinilog/signup.php'"class = "loginbutton" type="submit" href="signup.php">Sign Up</button>
                 <button type="submit" href="#">Order Now</button>
             </div>
         </nav>

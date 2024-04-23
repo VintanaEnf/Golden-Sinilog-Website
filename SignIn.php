@@ -1,3 +1,4 @@
+
 <html>
   <head>
     <title>Golden Sinilog Sign in</title>
@@ -75,13 +76,13 @@
 
     <section class="container">
       <div class="wrapper">
-        <form action="">
+        <form action="SignInSubmit.php" method="POST">
           <h1 id="heading">Login Account</h1>
           <div class="input-box">
-            <input type="text" placeholder="Username" required />
+            <input type="text" name="Username" required />
           </div>
           <div class="input-box">
-            <input type="password" placeholder="Password" required />
+            <input type="password" name="Password" required />
           </div>
           <p id="forgot-password">
             Forgot password?
@@ -102,5 +103,7 @@
         </form>
       </div>
     </section>
+
   </body>
 </html>
+

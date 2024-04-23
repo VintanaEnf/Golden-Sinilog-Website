@@ -16,8 +16,8 @@
                 </div>
             </div>
             <div style="justify-content: end; align-items: center; margin-right: 30px;">
-                <button class = "navbutton nav_loginbutton" type="submit" href="#">Login</button>
-                <button class = "navbutton nav_loginbutton" type="submit" href="#">Sign Up</button>
+                <button onclick="window.location.href = 'http://localhost/Golden_Sinilog/SignIn.php'" class = "navbutton nav_loginbutton" type="submit" href="#">Login</button>
+                <button onclick="window.location.href = 'http://localhost/Golden_Sinilog/Signup.php'" class = "navbutton nav_loginbutton" type="submit" href="#">Sign Up</button>
                 <button type="submit" href="#">Order Now</button>
             </div>
         </nav>
