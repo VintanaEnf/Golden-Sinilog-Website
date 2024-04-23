@@ -9,13 +9,13 @@
 
 
 <head>
-	<?php include 'css.php' ?>
+	<link rel="icon" type="images/x-icon" href="./IMAGES/general/Gred.png">
 	<link rel = "stylesheet" href = "./CSS/home.css">
 </head>
 
 <body>
 	<?php include 'navbar.php' ?>
-</body>
+
 
 	<!-- INDEX HTML -->
 	<div class = "MainText">
@@ -80,5 +80,6 @@
         <!-- END OF INDEX HTML -->
 
         <?php include 'footer.php' ?>
+</body>
 
 </html>
