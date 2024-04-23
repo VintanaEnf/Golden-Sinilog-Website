@@ -3,34 +3,12 @@
         <title>Golden Sinilog Privacy Policy</title>
         <link rel="icon" type="images/x-icon" href="./IMAGES/general/Gred.png">
         <link rel = "stylesheet" href = "./CSS/home.css">
-        <link rel="stylesheet" type="text/css" href="./CSS/jm_css.css">
+        <?php include 'css.php' ?>
     </head>
     
     <body>
 
-       <nav class = "flexnav">
-            <div style="display: flex; justify-content: start; align-items: center; color: white;">
-                <div style="margin-top: 10px;">
-                    <img src="./IMAGES/general/logo.png" alt="Logo" width="206" height="64">
-                </div>
-                <div>
-                    <img src="./IMAGES/general/WhiteVerticalLine.png" alt="Logo" width="1" height="64">
-                </div>
-
-                <div>
-                    <a style="text-decoration:none; font-family: aotf; color: white; margin: auto;margin-left: 30px;" href="index.php">Home</a>
-                </div>
-                <div>
-                    <a style="text-decoration:none; font-family: aotf; color: white;
-    margin: auto;margin-left: 15px;" href="aboutus.php">About Us</a>
-                </div>
-            </div>
-            <div style="justify-content: end; align-items: center; margin-right: 30px;">
-                <button class = "navbutton nav_loginbutton" type="submit" href="#">Login</button>
-                <button class = "navbutton nav_loginbutton" type="submit" href="#">Sign Up</button>
-                <button type="submit" href="#">Order Now</button>
-            </div>
-        </nav>
+       <?php include 'navbar.php'?>
 
 
 
@@ -72,11 +50,7 @@
             </div>
         </section>
 
-        <footer class="container" style="padding: 10px 1%; color: #858585;">
-                    <p>Located at B5 L6 PH4L MAIN ROAD GOLDEN CITY STA ROSA LAGUNA.</p>
-                    <p>Copyright © 2024 Golden Sinilog, All rights reserved.</p>
-                    
-        </footer>
+        <?php include 'footer.php' ?>
         
     </body>
 

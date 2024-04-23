@@ -65,6 +65,11 @@ h1{
     margin-bottom:0;
 }
 
+h2{
+    font-size: 40px;
+    color: white;
+}
+
 .flexnav{
     display: flex;
     justify-content: space-between;
@@ -112,4 +117,8 @@ h1{
 .white-text{
     color: white;
 
+}
+
+.larger-size{
+    font-size: 50px;
 }
