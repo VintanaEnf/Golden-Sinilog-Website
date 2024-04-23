@@ -1,16 +1,4 @@
-<?php 
-
-
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="icon" type="images/x-icon" href="./IMAGES/general/Gred.png">
-    <link rel="stylesheet" type="text/css" href="./CSS/jm_css.css"><title></title>
-</head>
-<body>
-	<nav class = "flexnav">
+<nav class = "flexnav">
             <div style="display: flex; justify-content: start; align-items: center; color: white;">
                 <div style="margin-top: 10px;">
                     <img src="./IMAGES/general/logo.png" alt="Logo" width="206" height="64">
@@ -33,5 +21,3 @@
                 <button type="submit" href="#">Order Now</button>
             </div>
         </nav>
-</body>
-</html>
