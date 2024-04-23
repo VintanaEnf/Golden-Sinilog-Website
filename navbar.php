@@ -8,11 +8,11 @@
                 </div>
 
                 <div>
-                    <a style="text-decoration:none; font-family: aotf; color: white; margin: auto;margin-left: 30px;" href="index.html">Home</a>
+                    <a style="text-decoration:none; font-family: aotf; color: white; margin: auto;margin-left: 30px;" href="index.php">Home</a>
                 </div>
                 <div>
                     <a style="text-decoration:none; font-family: aotf; color: white;
-    margin: auto;margin-left: 15px;" href="aboutus.html">About Us</a>
+    margin: auto;margin-left: 15px;" href="aboutus.php">About Us</a>
                 </div>
             </div>
             <div style="justify-content: end; align-items: center; margin-right: 30px;">
