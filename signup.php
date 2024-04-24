@@ -61,10 +61,10 @@
       <div
         style="justify-content: end; align-items: center; margin-right: 30px"
       >
-        <button class="navbutton nav_loginbutton" type="submit" href="#">
+        <button onclick="window.location.href = 'http://localhost/Golden-Sinilog/SignIn.php'" class="navbutton nav_loginbutton" type="submit" href="#">
           Login
         </button>
-        <button class="navbutton nav_loginbutton" type="submit" href="#">
+        <button onclick="window.location.href = 'http://localhost/Golden-Sinilog/signup.php'"class="navbutton nav_loginbutton" type="submit" href="#">
           Sign Up
         </button>
         <button type="submit" href="#">Order Now</button>

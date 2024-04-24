@@ -24,9 +24,9 @@
                 </div>
             </div>
             <div id = "end-button">
-                <button onclick="window.location.href = 'http://localhost/Golden_Sinilog/SignIn.php'"class = "loginbutton" type="submit" href="SignIn.php">Login</button>
+                <button onclick="window.location.href = 'http://localhost/Golden-Sinilog/SignIn.php'" class = "loginbutton" type="submit" href="SignIn.php">Login</button>
                 <button 
-                onclick="window.location.href = 'http://localhost/Golden_Sinilog/signup.php'"class = "loginbutton" type="submit" href="signup.php">Sign Up</button>
+                onclick="window.location.href = 'http://localhost/Golden-Sinilog/signup.php'"class = "loginbutton" type="submit" href="signup.php">Sign Up</button>
                 <button type="submit" href="#">Order Now</button>
             </div>
         </nav>
@@ -95,7 +95,7 @@
             <p>Located at B5 L6 PH4L MAIN ROAD GOLDEN CITY STA ROSA LAGUNA.</p>
             <p>Copyright © 2024 Golden Sinilog, All rights reserved.</p>
             <a class="footerLinks" href="Privacy_Policy.php">Privacy Policy</a>
-            <a class="footerLinks" href="Terms_of_Use">Terms of Use</a>
+            <a class="footerLinks" href="Terms_of_Use.php">Terms of Use</a>
         </div>
     </body>
 </html>
