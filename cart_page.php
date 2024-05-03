@@ -15,10 +15,14 @@
 </head>
 
 <body>
+
+    
     <?php
     $login = true;
     require './navbar.php';
     ?>
+
+
     <div class="main-content">
         <div class="head">
             <b>Cart</b>
