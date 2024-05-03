@@ -18,6 +18,28 @@
     src: url(../FONTS/UniversLTStd.otf);
 }
 
+
+
+.button-order {
+    background-color: #843C0C;
+    color: #fff;
+    border: 2px solid #af734b;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 20px;
+    min-width: 120px;
+    font-family: aotf;
+}
+
+.button-order:hover {
+    background-color: #9e765b;
+    transition: 0.7s;
+}
+
+.button-order:active {
+    background-color: #5f0c0c;
+}
+
 button {
     background-color:#843C0C;
     color: #fff;
@@ -220,3 +242,4 @@ body{
     margin-right: 1%;
     margin-left: 1%;
 }
+

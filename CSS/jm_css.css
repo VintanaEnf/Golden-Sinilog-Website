@@ -31,25 +31,6 @@ body{
     background-attachment: fixed;
 }
 
-button {
-    background-color:#843C0C;
-    color: #fff;
-    border:2px solid #af734b; 
-    border-radius:5px; 
-    padding:10px;
-    min-height:20px; 
-    min-width: 120px;
-    font-family: aotf;
-}
-
-button:hover {
-    background-color: #9e765b;
-    transition: 0.7s;
-}
-
-button:active {
-    background-color: #5f0c0c;
-}
 
 
 p{
@@ -70,24 +51,6 @@ h2{
     color: white;
 }
 
-.flexnav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #C00000;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0px;
-    left:0px;
-}
-
-.nav_loginbutton{
-    border: none;
-    background-color: rgba(0, 0, 0, 0);
-    margin-right: 10px;
-    min-width: 80px;
-}
 
 .main_container{
     display: flex;
@@ -123,8 +86,3 @@ h2{
     font-size: 50px;
 }
 
-a{
-    color: white;
-    font-size: 50px;
-        
-}

@@ -1,0 +1,31 @@
+.sw{
+    width: 100%;
+}
+.flex-row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+}
+.flex-col{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+    flex-direction: column;
+}
+.container{
+    margin-top: 10px;
+}
+.fit-content{
+    width: fit-content;
+}
+.design-container{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    padding: 15px;
+}
+.center{
+    margin: 0px 0px 0px 20px;
+}

@@ -1,0 +1,26 @@
+.projects{
+    display: inline-block;
+}
+.recent-flex{
+    margin-top: 20px;
+    display: flex;
+    gap: 1rem;
+}
+.variable-pricing{
+    padding: 1rem;
+    background-color: white;
+}
+.tbl-update{
+    text-align: left;
+}
+.timeframe{
+    margin: 0px 0px 10px 0px;
+    box-shadow: 1px 1px 5px rgba(180, 180, 180, 0.2);
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+.timeframe a{
+    margin-right: 15px;
+}

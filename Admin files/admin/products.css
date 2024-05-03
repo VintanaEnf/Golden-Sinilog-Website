@@ -1,0 +1,188 @@
+
+.main-content{
+    margin-top: 100px;
+}
+.main2{
+    min-width: fit-content;
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    border-radius: 10px;
+}
+.products-panel{
+    width: 100%;
+}
+.tbl{
+    overflow-y:scroll;
+   height:300px;
+   display:block;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.menu-panel{
+    width: 600px;
+}
+.side1{
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 50px;
+}
+.input-field{
+    height: 37px;
+    margin-bottom: 2rem;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgb(124, 124, 124);
+    box-shadow: inset 0 2px 5px rgba(0,0,0, 0.27);
+}
+.s{
+    width: 400px;
+}
+.s p{
+    margin: 20px 0px 5px 0px;
+}
+.s textarea{
+    height: 165px;
+    margin-bottom: 2rem;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgb(124, 124, 124);
+    box-shadow: inset 0 2px 5px rgba(0,0,0, 0.27);
+}
+.s input[type='submit']{
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+    height: 40px;
+    background-color: #d31a1a;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 5px;
+}
+.flex-row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+}
+.flex-col{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+    flex-direction: column;
+}
+.add-fields{
+    display: flex;
+}
+.projected-tbl{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.projected-tbl thead tr{
+    background-color: #980000;
+    color: #ffffff;
+    text-align: left;
+}
+.projected-tbl th, .projected-tbl td{
+    padding: 12px 15px;
+}
+.sw{
+    width: 100%;
+}
+.payment{
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0, 0.27);
+}
+.goto-btn{
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+    height: 40px;
+    background-color: #30d31a;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+
+
+
+
+/* CSS */
+.button-24 {
+    text-decoration: none !important;
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+.btn-edit{
+    color: rgb(255, 196, 0);
+}
+.btn-remove{
+    color: rgb(158, 0, 0);
+}
+.notify{
+    background-color: #980000;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.apply-btn{
+    background-color: white;
+    color: #ff9900;
+    text-decoration: none;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
