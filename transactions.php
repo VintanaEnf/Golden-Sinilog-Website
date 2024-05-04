@@ -15,7 +15,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM users";
+$sql = "SELECT * FROM transactions";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
