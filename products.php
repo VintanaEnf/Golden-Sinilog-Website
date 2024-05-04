@@ -24,6 +24,7 @@ if ($result->num_rows > 0) {
         array_push($userlist, $row);
     }
 
+    //erase this line pag nagets na, for explanation lang to.
     print_r($userlist);
 } else {
     echo "0 results";
