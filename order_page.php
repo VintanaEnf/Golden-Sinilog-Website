@@ -49,7 +49,7 @@
                              '<p class="price">Price: '.$row['Price'].'</p>' .
                              '</div>' .
                              '<div>' .
-                             '<button class="shopnow" onclick="showToast()"><img src="./IMAGES/home/ShoppingCart.png" alt="Logo" width="16" height="16"></button>' .
+                             '<button class="shopnow" onclick="showToast('.$row['ID'].')"><img src="./IMAGES/home/ShoppingCart.png" alt="Logo" width="16" height="16"></button>' .
                              '</div>' .
                              '</div>' .
                              '</div>';
@@ -65,22 +65,8 @@
         </div>
     </div>
     <div id="toastBox"></div>
-    <script>
-    let toastBox = document.querySelector('#toastBox');
-    let message = 'An item has been added to cart.';
 
-    function showToast() {
-        console.log('function was called');
-        let toast = document.createElement('div');
-        toast.classList.add('toast');
-        toast.innerHTML = message;
-        toastBox.appendChild(toast);
-
-        setTimeout(() => {
-            toast.remove();
-        }, 5000);
-    }
-    </script>
+    <script src="cart.js"></script>
 </body>
 
 
