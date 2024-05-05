@@ -22,137 +22,51 @@
         </div>
 
         <div class="menu">
-            <div class="Foods order" id="Golden Liempo">
-                <img src="./IMAGES/home/liempoOrtho.png" alt="Image of a Liempsilog" class="FoodImages" width="200"
-                    height="200">
-                <div class="fancytext">Golden Liempo</div>
-                <div class="bottomPriceCart">
-                    <div>
-                        <p class="price">Price: 120PHP</p>
-                    </div>
-                    <div>
-                        <button class="shopnow" onclick="showToast()"><img src="./IMAGES/home/ShoppingCart.png"
-                                alt="Logo" width="16" height="16"></button>
-                    </div>
-                </div>
-            </div>
-            <div class="Foods order" id="Golden Tapa">
-                <img src="./IMAGES/home/TapaOrtho.png" alt="Image of a Liempsilog" class="FoodImages" width="200"
-                    height="200">
-                <div class="fancytext">Golden Tapa</div>
-                <div class="bottomPriceCart">
-                    <div>
-                        <p class="price">Price: 120PHP</p>
-                    </div>
-                    <div>
-                        <button class="shopnow" onclick="showToast()"><img src="./IMAGES/home/ShoppingCart.png"
-                                alt="Logo" width="16" height="16"></button>
-                    </div>
-                </div>
-            </div>
-            <div class="Foods order" id="Golden Chicken">
-                <img src="./IMAGES/home/ChickenOrtho.png" alt="Image of a Liempsilog" class="FoodImages" width="200"
-                    height="200">
-                <div class="fancytext">Golden Chicken</div>
-                <div class="bottomPriceCart">
-                    <div>
-                        <p class="price">Price: 130PHP</p>
-                    </div>
-                    <div>
-                        <button class="shopnow" onclick="showToast()"><img src="./IMAGES/home/ShoppingCart.png"
-                                alt="Logo" width="16" height="16"></button>
-                    </div>
-                </div>
-            </div>
-            <div class="Foods order" id="Golden Bangus">
-                <img src="./IMAGES/home/BangusOrtho.png" alt="Image of a Liempsilog" class="FoodImages" width="200"
-                    height="200">
-                <div class="fancytext">Golden Bangus</div>
-                <div class="bottomPriceCart">
-                    <div>
-                        <p class="price">Price: 120PHP</p>
-                    </div>
-                    <div>
-                        <button class="shopnow" onclick="showToast()"><img src="./IMAGES/home/ShoppingCart.png"
-                                alt="Logo" width="16" height="16"></button>
-                    </div>
-                </div>
-            </div>
-            <div class="Foods order" id="Golden Liempo">
-                <img src="./IMAGES/home/liempoOrtho.png" alt="Image of a Liempsilog" class="FoodImages" width="200"
-                    height="200">
-                <div class="fancytext">Golden Liempo</div>
-                <div class="bottomPriceCart">
-                    <div>
-                        <p class="price">Price: 120PHP</p>
-                    </div>
-                    <div>
-                        <button class="shopnow" onclick="showToast()"><img src="./IMAGES/home/ShoppingCart.png"
-                                alt="Logo" width="16" height="16"></button>
-                    </div>
-                </div>
-            </div>
-            <div class="Foods order" id="Golden Liempo">
-                <img src="./IMAGES/home/liempoOrtho.png" alt="Image of a Liempsilog" class="FoodImages" width="200"
-                    height="200">
-                <div class="fancytext">Golden Liempo</div>
-                <div class="bottomPriceCart">
-                    <div>
-                        <p class="price">Price: 120PHP</p>
-                    </div>
-                    <div>
-                        <button class="shopnow" onclick="showToast()"><img src="./IMAGES/home/ShoppingCart.png"
-                                alt="Logo" width="16" height="16"></button>
-                    </div>
-                </div>
-            </div>
-            <div class="Foods order" id="Golden Liempo">
-                <img src="./IMAGES/home/liempoOrtho.png" alt="Image of a Liempsilog" class="FoodImages" width="200"
-                    height="200">
-                <div class="fancytext">Golden Liempo</div>
-                <div class="bottomPriceCart">
-                    <div>
-                        <p class="price">Price: 120PHP</p>
-                    </div>
-                    <div>
-                        <button class="shopnow" onclick="showToast()"><img src="./IMAGES/home/ShoppingCart.png"
-                                alt="Logo" width="16" height="16"></button>
-                    </div>
-                </div>
-            </div>
-            <div class="Foods order" id="Golden Liempo">
-                <img src="./IMAGES/home/liempoOrtho.png" alt="Image of a Liempsilog" class="FoodImages" width="200"
-                    height="200">
-                <div class="fancytext">Golden Liempo</div>
-                <div class="bottomPriceCart">
-                    <div>
-                        <p class="price">Price: 120PHP</p>
-                    </div>
-                    <div>
-                        <button class="shopnow" onclick="showToast()"><img src="./IMAGES/home/ShoppingCart.png"
-                                alt="Logo" width="16" height="16"></button>
-                    </div>
-                </div>
-            </div>
+            <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "golden_sinilog";
+
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT * FROM foods";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    $userlist = array();
+                    while($row = $result->fetch_assoc()) {
+                        echo '<div class="Foods order" id="' .$row['ID']. '">' .
+                             '<img src="./IMAGES/FOODS/'.$row['ImagePath'].'" alt="Image of a '.$row['Name'].'" class="FoodImages" width="200" height="200">' .
+                             '<div class="fancytext">'.$row['Name'].'</div>' .
+                             '<div class="bottomPriceCart">' .
+                             '<div>' .
+                             '<p class="price">Price: '.$row['Price'].'</p>' .
+                             '</div>' .
+                             '<div>' .
+                             '<button class="shopnow" onclick="showToast('.$row['ID'].', \''.$row['Name'].'\', '.$row['Price'].')"><img src="./IMAGES/home/ShoppingCart.png" alt="Logo" width="16" height="16"></button>'.
+                             '</div>' .
+                             '</div>' .
+                             '</div>';
+                    }
+                }
+
+                else {
+                    echo "0 results";
+                }
+
+                $conn->close();
+                ?>
         </div>
     </div>
     <div id="toastBox"></div>
-    <script>
-    let toastBox = document.querySelector('#toastBox');
-    let message = 'An item has been added to cart.';
 
-    function showToast() {
-        console.log('function was called');
-        let toast = document.createElement('div');
-        toast.classList.add('toast');
-        toast.innerHTML = message;
-        toastBox.appendChild(toast);
-
-        setTimeout(() => {
-            toast.remove();
-        }, 5000);
-    }
-    </script>
+    <script src = 'cart.js'></script>
 </body>
 
 

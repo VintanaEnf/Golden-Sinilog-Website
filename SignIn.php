@@ -17,10 +17,10 @@
       <form action="SignInSubmit.php" method="POST">
         <h1 id="heading">Login Account</h1>
         <div class="input-box">
-          <input type="text" name="Username" required />
+          <input type="text" name="Email" placeholder="Email" required />
         </div>
         <div class="input-box">
-          <input type="password" name="Password" required />
+          <input type="password" name="Password" placeholder="Password" required />
         </div>
         <p id="forgot-password">
           Forgot password?

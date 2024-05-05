@@ -12,19 +12,19 @@
 
     <section class="container">
         <div class="wrapper">
-            <form action="">
+            <form action="SignUpSubmit.php" method = "POST">
                 <h1 id="heading">Create new Account</h1>
                 <div class="input-box">
-                    <input type="text" placeholder="First Name" required />
+                    <input type="text" name="First" placeholder="First Name" required />
                 </div>
                 <div class="input-box">
-                    <input type="text" placeholder="Last Name" required />
+                    <input type="text" name="Last" placeholder="Last Name" required />
                 </div>
                 <div class="input-box">
-                    <input type="text" placeholder="Email" required />
+                    <input type="text" name="Email" placeholder="Email" required />
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Password" required />
+                    <input type="password" name="Pass" placeholder="Password" required />
                 </div>
 
 
