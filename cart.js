@@ -1,24 +1,25 @@
-let toastBox = document.querySelector('#toastBox');
-let message = 'An item has been added to cart.';
+    let toastBox = document.querySelector('#toastBox');
+    let message = 'An item has been added to cart.';
 
-    function showToast(productID) {
+    function showToast(productID, PriceP) {
         console.log('function was called');
         let toast = document.createElement('div');
         toast.classList.add('toast');
         toast.innerHTML = message;
         toastBox.appendChild(toast);
-        addToCart(productID);
+        addToCart(productID, PriceP);
         setTimeout(() => {
             toast.remove();
         }, 5000);
     }
 
-    function addToCart(productId) {
+    function addToCart(ROWID, productId, PriceS) {
     // Retrieve existing cart data from cookie or initialize as empty array
     var cart = JSON.parse(getCookie("cart") || "[]");
-    
     // Add the new item to the cart
-    cart.push({id: productId});
+    cart.push({true_id: ROWID, product_id: productId, price: PriceS, quantity: 1});
+
+    console.log(cart);
     
     // Save the updated cart back to the cookie
     setCookie("cart", JSON.stringify(cart), 30); // Expires in 30 days
