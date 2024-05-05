@@ -24,11 +24,34 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Authentication successful
     echo json_encode(array('status' => 'success', 'message' => 'Login successful'));
+
+    setcookie("loggedin", 1);
+
+	$sqlid = $conn->query("SELECT * FROM users WHERE 1 AND Email='$email'");
+	if($sqlid){
+		$row = $sqlid->fetch_assoc();
+	    if ($row) {
+		    setcookie("FirstName", $row['FirstName']);
+		    setcookie("LastName", $row['LastName']);
+	    } else {
+	        echo "No user found.";
+    	}
+	}
+
+
 } else {
     // Authentication failed
-    echo json_encode(array('status' => 'error', 'message' => 'Invalid username or password'));
+    echo json_encode(array('status' => 'error', 'message' => 'Invalid username or password'
+));
+        setcookie("loggedin", 0);
+        setcookie("FirstName", "");
+        setcookie("LastName", "");
+
 }
 
 // Close database connection
 $conn->close();
+$_SESSION['step'] = 1;
+header('Location: http://localhost/Golden_Sinilog/index.php');
+exit()
 ?>

@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <?php
 $servername = "localhost";
 $username = "root";
@@ -15,14 +11,18 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM foods";
+$sql = "SELECT * FROM users";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     $userlist = array();
+    
+
     while($row = $result->fetch_assoc()) {
         array_push($userlist, $row);
+
     }
+    //print_r($userlist[1]["ID"]);
 
     //erase this line pag nagets na, for explanation lang to.
     print_r($userlist);
@@ -32,6 +32,3 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
-
-</body>
-</html>

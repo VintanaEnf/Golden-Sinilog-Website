@@ -25,7 +25,7 @@
             </h2>
         </header>
     </div>
-    <form action="successful-add-product.php" method="POST" enctype="multipart/form-data">
+    <form action="successful-delete-product.php" method="POST" enctype="multipart/form-data">
         <div class="main-content">
             <div class="main2">
                 <div class="flex-row">
@@ -34,27 +34,15 @@
                             <p> Product ID </p>
                             <input type="number" name="prod_id" id="" class="input-field" required>
 
-                            <p>Product Name</p>
-                            <input type="text" name="prod_name" id="" class="input-field" required>
-
-
-                            <p>Product Quantity</p>
-                            <input type="number" name="prod_quantity" id="" class="input-field" required>
-                            
-                            <p>Product Description</p>
-                            <textarea name="prod_desc" id="" cols="30" rows="10"></textarea required>
+                           
                     </div>
                     <div class="s">
                         
-                    <p>Product Image</p>
                         <!--<input type="file" name="image" id="" required accept=".jpeg,.png,.jpg">
 
                         -->
-                        <input type="text" name="image" id="" class="input-field" required>
-                        
-                        <p>Product Selling Price</p>
-                        <input type="number" name="prod_price" id="" min="1" class="input-field" required>
-                        <input type="submit" value="Add Product" name="edit-prod">
+                        <p> Are you sure you wanna delete this product? </p>
+                        <input type="submit" value="Delete Product" name="edit-prod">
                     </div>
                 </div>
 

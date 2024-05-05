@@ -1,3 +1,39 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "golden_sinilog";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM foods";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $userlist = array();
+    
+
+    while($row = $result->fetch_assoc()) {
+        array_push($userlist, $row);
+
+    }
+    //print_r($userlist[1]["ID"]);
+
+    //erase this line pag nagets na, for explanation lang to.
+    //print_r($userlist);
+} else {
+    echo "0 results";
+}
+
+$conn->close();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,11 +76,14 @@
                             <th>Product Name</th>
                             <th>Product Desc</th>
                             <th>Product Price</th>
+                            <th>Product Quantity</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody style="width: 100%;">
-                        <tr>
+
+
+                      <!--  <tr>
                         <tr>
                             <td>DATA HERE</td>
                             <td>DATA HERE</td>
@@ -56,8 +95,49 @@
                                         delete
                                     </span></a></td>
                         </tr>
-
                         </tr>
+                        
+                        -->
+
+                        <?php
+                            foreach ($userlist as $key => $userlist[1]){
+
+                                echo '<tr>';
+                                echo '<tr>';
+
+                                    echo '<td>';
+                                    echo $userlist[1]["ID"]; 
+
+                                    echo '</td>';
+
+                                    echo '<td>';
+                                    echo $userlist[1]["Name"]; 
+                                    echo '</td>';
+
+                                    echo '<td>';
+                                    echo $userlist[1]["Description"]; 
+                                    echo '</td>';
+
+                                    echo '<td>';
+                                    echo $userlist[1]["Price"]; 
+                                    echo '</td>';
+
+                                    echo '<td>';
+                                    echo $userlist[1]["quantity"]; 
+                                    echo '</td>';
+
+                                    echo "<td><a href='./edit-product.php' class='btn-edit'><span class='material-symbols-outlined'>
+                                        edit
+                                    </span></a><a href='product-delete.php' class='btn-remove'><span class='material-symbols-outlined'>
+                                        delete
+                                    </span></a></td>";
+
+                                echo '</tr>';
+                                echo '</tr>';
+
+                            }
+                        ?>
+
                     </tbody>
                 </table>
             </div>
