@@ -12,7 +12,7 @@
 
     <section class="container">
         <div class="wrapper">
-            <form action="SignUpSubmit.php" method = "POST">
+            <form action="./SignUpSubmit.php" method = "POST">
                 <h1 id="heading">Create new Account</h1>
                 <div class="input-box">
                     <input type="text" name="First" placeholder="First Name" required />

@@ -14,7 +14,7 @@
 
   <section class="container">
     <div class="wrapper">
-      <form action="SignInSubmit.php" method="POST">
+      <form action="./SignInSubmit.php" method="POST">
         <h1 id="heading">Login Account</h1>
         <div class="input-box">
           <input type="text" name="Email" placeholder="Email" required />
