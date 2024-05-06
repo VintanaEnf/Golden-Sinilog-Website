@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="./CSS/jm_css.css">
 
     <link rel="stylesheet" href="./CSS/home.css">
+
 </head>
 
 <body>
@@ -16,7 +17,7 @@
 
     <section class="main_container white-text">
 
-        <div class="container container-background white-text">
+        <div style="border-radius: 30px; justify-content: center; width: 50%;" class="container container-background white-text">
             <div>
                 <!--<img style="padding: 10px;" src="./IMAGES/aboutus/Golden-Sinilog.jpg" alt="Logo" width="412" height="256"> -->
                 <h1 style="padding: 20px; text-align: center; font-size: 50; font-family: univers; margin-bottom:5px;">

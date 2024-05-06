@@ -49,7 +49,8 @@
 
                         if ($result->num_rows > 0) {
                             // Username already exists
-                            echo json_encode(array('status' => 'error', 'message' => 'Username already exists'));
+                            // echo json_encode(array('status' => 'error', 'message' => 'Username already exists'));
+                            echo 'Email Already Exists';
                             exit;
                         }
 
@@ -59,9 +60,11 @@
                         if ($conn->query($sql) === TRUE) {
                             // User registration successful
                             echo json_encode(array('status' => 'success', 'message' => 'User registration successful'));
+                            header("Location: index.php");
                         } else {
                             // Error inserting user into database
-                            echo json_encode(array('status' => 'error', 'message' => 'Error registering user'));
+                            // echo json_encode(array('status' => 'error', 'message' => 'Error registering user'));
+                            echo 'Error Registering User';
                         }
 
                         // Close database connection
