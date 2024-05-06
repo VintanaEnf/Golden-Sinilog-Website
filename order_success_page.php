@@ -64,3 +64,95 @@
 </body>
 
 </html>
+[]
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "golden_sinilog";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+$cartItems = json_decode($_COOKIE['cart'], true);
+
+if ($cartItems === null){
+    $_SESSION['step'] = 1;
+    header('Location: http://localhost/golden-sinilog-website/checkout_page.php');
+    exit();
+}
+
+$foodidsql = "INSERT INTO transactions (UserID ,TotalAmount, PurchasedItems) VALUES (?, ?, ?)";
+
+
+$stmt = $conn->prepare($foodidsql);
+
+
+$stmt->bind_param("iis", $useridsql, $totalamountsql, $purchaseditemssql);
+
+
+
+$sqluser = "SELECT * FROM users";
+$resultuser = $conn->query($sqluser);
+
+if ($resultuser->num_rows > 0) {
+    $userlist = array();
+    
+
+    while($row = $resultuser->fetch_assoc()) {
+        array_push($userlist, $row);
+
+    }
+} else {
+    echo "0 results";
+}
+
+
+foreach ($userlist as $key => $userlist[1]){
+
+    if($userlist[1]["FirstName"] == $_COOKIE['FirstName']){ 
+        if($userlist[1]['LastName'] == $_COOKIE['LastName']){
+            $connection_passed = 1;
+
+            $userInfo = $userlist;
+            break;
+        }
+    }
+}
+
+
+if($_COOKIE['FirstName'] == $userlist[1]['FirstName'] and $_COOKIE['LastName'] == $userlist[1]['LastName']){
+    $useridsql = $userlist[1]["ID"];
+}
+
+foreach ($cartItems as $item) {
+    $num1 = (int) $item['quantity'];
+
+    $num2 = (int) $item['price'];
+
+//    $totalamountsql += (int) $item['quantity' * (int) $item['price']];
+    $totalamountsql += $num1 * $num2;
+
+    $purchaseditemssql = $item['product_id'] . "| quantity: " . $item['quantity'] . "| Money paid: " . $totalamountsql;
+
+};
+
+
+
+//$TransactionDatesql = "Today is " . date('Y-m-d H:i:s') . "<br>";
+
+$stmt->execute();
+
+echo "RECORDED: " . $stmt->affected_rows;
+
+$stmt->close();
+$conn->close(); 
+$_SESSION['step'] = 1;
+//header('Location: http://localhost/golden-sinilog-website/checkout_page.php');
+exit();
+?>
