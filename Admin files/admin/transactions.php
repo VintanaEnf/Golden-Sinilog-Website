@@ -38,6 +38,35 @@ foreach ($userlist as $key => $userlist[1]){
 	}
 }
 
+
+$sqltransaction = "SELECT * FROM transactions WHERE 1";
+$transresult = $conn->query($sqltransaction);
+
+if ($transresult->num_rows > 0) {
+    $transactionlist = array();
+    
+
+    while($row = $transresult->fetch_assoc()) {
+        array_push($transactionlist, $row);
+
+    }
+} else {
+    echo "0 results";
+}
+
+echo $transactionlist;
+
+echo $transactionlist;
+echo $transactionlist;
+echo $transactionlist;
+echo $transactionlist;
+echo $transactionlist;
+echo $transactionlist;
+echo $transactionlist;
+echo $transactionlist;
+echo $transactionlist;
+echo $transactionlist;
+print_r($transactionlist);
 $conn->close();
 
 
@@ -131,24 +160,24 @@ $conn->close();
                                 echo '<tr>';
 
                                     echo '<td>';
-                                    echo $userlist[1]["ID"]; 
+                                    echo $transactionlist[1]["ID"]; 
 
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $userlist[1]["UserID"]; 
+                                    echo $transactionlist[1]["UserID"]; 
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $userlist[1]["TransacionDate"]; 
+                                    echo $transactionlist[1]["TransacionDate"]; 
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $userlist[1]["TotalAmount"]; 
+                                    echo $transactionlist[1]["TotalAmount"]; 
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $userlist[1]["PurchasedItems"]; 
+                                    echo $transactionlist[1]["PurchasedItems"]; 
                                     echo '</td>';
 
                                   

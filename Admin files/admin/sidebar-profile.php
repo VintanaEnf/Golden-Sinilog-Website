@@ -64,7 +64,14 @@
           };
           ?>
 
+          <li>
 
+            <a href="../../index.php"
+              ><span class="material-symbols-outlined">list</span>
+              <span>home</span></a
+            >
+
+          </li>
 
         </ul>
         <hr color="grey" />
