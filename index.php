@@ -63,7 +63,7 @@ else{
                     <p class="price">Price: 120PHP</p>
                 </div>
                 <div>
-                    <button class="shopnow"><img src="./IMAGES/home/ShoppingCart.png" alt="Logo" width="16" height="16"></button>
+                    <button class="shopnow" onclick="window.location.href='order_page.php';"><img src="./IMAGES/home/ShoppingCart.png" alt="Logo" width="16" height="16"></button>
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@ else{
                     <p class="price">Price: 120PHP</p>
                 </div>
                 <div>
-                    <button class="shopnow"><img src="./IMAGES/home/ShoppingCart.png" alt="Logo" width="16" height="16"></button>
+                    <button class="shopnow" onclick="window.location.href='order_page.php';"><img src="./IMAGES/home/ShoppingCart.png" alt="Logo" width="16" height="16"></button>
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@ else{
                     <p class="price">Price: 130PHP</p>
                 </div>
                 <div>
-                    <button class="shopnow"><img src="./IMAGES/home/ShoppingCart.png" alt="Logo" width="16" height="16"></button>
+                    <button class="shopnow" onclick="window.location.href='order_page.php';"><img src="./IMAGES/home/ShoppingCart.png" alt="Logo" width="16" height="16"></button>
                 </div>
             </div>
         </div>
@@ -102,7 +102,7 @@ else{
                     <p class="price">Price: 120PHP</p>
                 </div>
                 <div>
-                    <button class="shopnow"><img src="./IMAGES/home/ShoppingCart.png" alt="Logo" width="16" height="16"></button>
+                    <button class="shopnow" onclick="window.location.href='order_page.php';"><img src="./IMAGES/home/ShoppingCart.png" alt="Logo" width="16" height="16"></button>
                 </div>
             </div>
         </div>
