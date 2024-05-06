@@ -49,7 +49,7 @@
                              '<p class="price">Price: '.$row['Price'].'</p>' .
                              '</div>' .
                              '<div>' .
-                             '<button class="shopnow" onclick="showToast('.$row['ID'].', \''.$row['Name'].'\', '.$row['Price'].')"><img src="./IMAGES/home/ShoppingCart.png" alt="Logo" width="16" height="16"></button>'.
+                             '<button class="shopnow" onclick="showToast('.$row['ID'].',\''.$row['Name'].'\',\''.$row['Price'].'\')"><img src="./IMAGES/home/ShoppingCart.png" alt="Logo" width="16" height="16"></button>'.
                              '</div>' .
                              '</div>' .
                              '</div>';

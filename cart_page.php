@@ -47,6 +47,8 @@
     </div>
     <script>
     // Define the initial cart data
+
+    console.log(getCookie("cart"));
     var cart = [
         {
             'true_id': 1,
