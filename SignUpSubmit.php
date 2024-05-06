@@ -59,7 +59,7 @@
 
                         if ($conn->query($sql) === TRUE) {
                             // User registration successful
-                            echo json_encode(array('status' => 'success', 'message' => 'User registration successful'));
+                            echo json_encode(array('status' => 'success', 'message' => 'User registration successful, redirecting you back to Home.'));
                             header("Location: index.php");
                         } else {
                             // Error inserting user into database
