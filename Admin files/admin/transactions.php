@@ -32,6 +32,8 @@ foreach ($userlist as $key => $userlist[1]){
 	if($userlist[1]["FirstName"] == $_COOKIE['FirstName']){	
 		if($userlist[1]['LastName'] == $_COOKIE['LastName']){
 			$connection_passed = 1;
+            $userInfo = $userlist;
+            break;
 		}
 	}
 }
@@ -70,7 +72,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products</title>
+    <title>Transactions</title>
 </head>
 
 <body>
@@ -82,7 +84,7 @@ $conn->close();
                 <label for="">
                     <span class="material-symbols-outlined">menu</span>
                 </label>
-                Product Management
+                Transactions
             </h2>
 
         </header>
@@ -91,18 +93,16 @@ $conn->close();
     <div class="main-content">
         <div class="main2">
             <div class="products-panel">
-                <h3>ASD</h3>
-                <a href="../admin/add-product.php" class="button-24">New Product</a>
+                <h3>Transaction Table</h3>
                 <br>
                 <table class="projected-tbl">
                     <thead style="width: 100%;">
                         <tr>
-                            <th>Product ID</th>
-                            <th>Product Name</th>
-                            <th>Product Desc</th>
-                            <th>Product Price</th>
-                            <th>Product Quantity</th>
-                            <th>Action</th>
+                            <th>Transaction ID</th>
+                            <th>User ID</th>
+                            <th>Transaction Date</th>
+                            <th>Total Amount</th>
+                            <th>Purchased Items</th>
                         </tr>
                     </thead>
                     <tbody style="width: 100%;">
@@ -136,27 +136,22 @@ $conn->close();
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $userlist[1]["Name"]; 
+                                    echo $userlist[1]["UserID"]; 
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $userlist[1]["Description"]; 
+                                    echo $userlist[1]["TransacionDate"]; 
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $userlist[1]["Price"]; 
+                                    echo $userlist[1]["TotalAmount"]; 
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $userlist[1]["quantity"]; 
+                                    echo $userlist[1]["PurchasedItems"]; 
                                     echo '</td>';
 
-                                    echo "<td><a href='./edit-product.php' class='btn-edit'><span class='material-symbols-outlined'>
-                                        edit
-                                    </span></a><a href='product-delete.php' class='btn-remove'><span class='material-symbols-outlined'>
-                                        delete
-                                    </span></a></td>";
-
+                                  
                                 echo '</tr>';
                                 echo '</tr>';
 
