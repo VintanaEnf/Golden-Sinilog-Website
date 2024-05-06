@@ -1,4 +1,4 @@
-<?php setcookie("loggedin", 0);
+<?php setcookie("loggedin", 0) ?>;
 
 <html>
 
