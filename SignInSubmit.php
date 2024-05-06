@@ -52,6 +52,6 @@ if ($result->num_rows > 0) {
 // Close database connection
 $conn->close();
 $_SESSION['step'] = 1;
-header('Location: http://localhost/Golden_Sinilog/index.php');
+header('Location: http://localhost/golden-sinilog-website/index.php');
 exit()
 ?>
