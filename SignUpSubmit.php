@@ -49,5 +49,7 @@ if ($conn->query($sql) === TRUE) {
 
 // Close database connection
 $conn->close();
-
+$_SESSION['step'] = 1;
+header('Location: http://localhost/Golden_Sinilog/index.php');
+exit()
 ?>
