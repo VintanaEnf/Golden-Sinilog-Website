@@ -23,7 +23,7 @@
         
 
 
-        <button onclick="window.location.href = \'#\'" class="loginbutton" type="submit" href="#">'; 
+        <button onclick="window.location.href = \'Admin%20Files/admin/profile.php\'" class="loginbutton" type="submit" href="#">'; 
         echo $_COOKIE['FirstName'];
         echo ' '; 
         echo $_COOKIE['LastName'];
