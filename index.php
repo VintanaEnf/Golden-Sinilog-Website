@@ -1,3 +1,5 @@
+<?php setcookie("loggedin", 0);
+
 <html>
 
 <head>
