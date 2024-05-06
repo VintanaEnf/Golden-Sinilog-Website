@@ -45,6 +45,6 @@ echo "RECORDED: " . $stmt->affected_rows;
 $stmt->close();
 $conn->close();	
 $_SESSION['step'] = 1;
-header('Location: http://localhost/Golden_Sinilog/Admin%20Files/admin/users.php');
+header('Location: http://localhost/golden-sinilog-website/Admin%20Files/admin/users.php');
 exit();
 ?>
