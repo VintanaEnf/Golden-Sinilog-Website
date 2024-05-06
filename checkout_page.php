@@ -62,7 +62,7 @@
                 <div class="checkout">
                     <div class="cart-details">
                         <h4>Payment</h4>
-                        <h6>Payment Method</h6>
+                        <h6>Gcash Payment</h6>
                         <div class="qr-code">
                             <p>Pay the amount to this account (09XXXXXXXXX) </p>
                             <img src="./IMAGES/qr-code-example.JPG" alt="qr code" width="200px">
@@ -89,14 +89,54 @@
                         </thead>
 
                         <tbody>
-                            <tr>
-                                <td style="min-width: fit-content; display: flex; justify-content: start; align-items: center; gap: 24px">
-                                    <img src="./IMAGES/home/LiempoOrtho.png" alt="product" style="display: inline-block;" width="80px" height="60px">DATA HERE
-                                </td>
-                                <td>DATA HERE</td>
-                                <td>DATA HERE</td>
-                                <td>DATA HERE</td>
-                            </tr>
+                            
+                                <?php   
+                                
+                                $cartItems = json_decode($_COOKIE['cart'], true);
+                                if ($cartItems === null){
+                                    echo '<tr> <td>DATA HERE</td> 
+                                        <td>DATA HERE</td> 
+                                        <td>DATA HERE</td> </tr> ';
+                          
+                                        
+                                    }
+
+                                    if (isset($cartItems)) {
+                                    foreach ($cartItems as $item) {
+                                        echo '<tr>';
+                                        //echo '<td style="min-width: fit-content; display: flex; justify-content: start; align-items: center; gap: 24px">
+                                    //</tbody img src="'; 
+
+                                      //  echo '" alt="product" style="display: inline-block;" width="80px" height="60px">';
+                                        echo '<td>';
+                                        echo "". htmlspecialchars($item['product_id']) . "<br><br>";
+                                       echo  '</td> ';
+                                        echo '<td>';
+
+                                        echo "". htmlspecialchars($item['quantity']) . "<br><br>";
+                                        echo '</td>';
+
+                                        echo '<td>';
+                                        echo "". htmlspecialchars($item['price']) . "<br><br>";
+                                        echo '</td>';
+
+                                        echo '<td>';
+                                        echo "". htmlspecialchars($item['price'] * $item['quantity']) . "<br><br>";
+                                        echo '</td>';
+
+
+                                        echo '</tr>';
+
+
+                                    }
+}
+
+
+                                ?>
+                           
+
+                            
+
                         </tbody>
                     </table>
 
