@@ -47,9 +47,9 @@
 							// Authentication successful
 							// echo json_encode(array('status' => 'success', 'message' => 'Login successful'));
 							echo 'Login Successful!';
-
+							
 							setcookie("loggedin", 1);
-
+								
 							$sqlid = $conn->query("SELECT * FROM users WHERE 1 AND Email='$email'");
 							if($sqlid){
 								$row = $sqlid->fetch_assoc();
@@ -61,7 +61,7 @@
 									echo '<br><br><button>Retry</button>';
 								}
 							}
-
+							header("Location: index.php");
 
 						} else {
 							// Authentication failed
