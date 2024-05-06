@@ -32,31 +32,38 @@
 
           <li>
 
-            <a href="../admin/products.php"
-              ><span class="material-symbols-outlined">list</span>
-              <span>Products</span></a
-            >
-
-          </li>
-
-
-          <li>
-
-            <a href="../admin/users.php"
-              ><span class="material-symbols-outlined">list</span>
-              <span>Users</span></a
-            >
-
-          </li>
-
-          <li>
-
-            <a href="../admin/profile.php"
+            <a href="../admin/Profile.php"
               ><span class="material-symbols-outlined">list</span>
               <span>Profile</span></a
             >
 
           </li>
+
+
+          <li>
+
+            <a href="../admin/Transactions.php"
+              ><span class="material-symbols-outlined">list</span>
+              <span>Transactions</span></a
+            >
+
+          </li>
+
+          <?php 
+
+          if($userlist[1]['IsAdmin'] == 1){
+            echo'<li>
+
+              <a href="../admin/products.php"
+                ><span class="material-symbols-outlined">list</span>
+                <span>Admin Page</span></a
+              >
+
+            </li>
+            ';
+          };
+          ?>
+
 
 
         </ul>

@@ -32,36 +32,20 @@ foreach ($userlist as $key => $userlist[1]){
 	if($userlist[1]["FirstName"] == $_COOKIE['FirstName']){	
 		if($userlist[1]['LastName'] == $_COOKIE['LastName']){
 			$connection_passed = 1;
+
+			$userInfo = $userlist;
+			break;
 		}
 	}
 }
 
-$conn->close();
 
 
 
  if($connection_passed == 1){
 
 
-
-
-
-
-
-
- }else{
-	$_SESSION['step'] = 1;
-	header('Location: http://localhost/Golden_Sinilog/index.php');
-	exit();
-
- }
-
-
- ?>
-
-
-
-<!DOCTYPE html>
+echo '<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -74,6 +58,10 @@ $conn->close();
 </head>
 
 <body>
+';
+	include 'sidebar-profile.php';
+ 
+echo '
     <div class="test">
         <header>
             <h2>
@@ -89,83 +77,74 @@ $conn->close();
     <div class="main-content">
         <div class="main2">
             <div class="products-panel">
-                <h3>Products</h3>
-                <a href="../admin/add-product.php" class="button-24">New Product</a>
-                <br>
-                <table class="projected-tbl">
-                    <thead style="width: 100%;">
-                        <tr>
-                            <th>Product ID</th>
-                            <th>Product Name</th>
-                            <th>Product Desc</th>
-                            <th>Product Price</th>
-                            <th>Product Quantity</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody style="width: 100%;">
+                <h3>Profile Page</h3>
+                <div class="flex-row">
+                    <div class="flex-row">
+                        <div class="s"> <p>User ID: ';
+// DITO GAWA CODE 
+
+ echo $userlist[1]["ID"];
+ echo '</p>';
+
+ echo '<p> User Name:'; 
+ echo $userlist[1]['FirstName'];
+ echo ' ';
+ echo $userlist[1]['LastName'];
+ echo '</p>';
+
+ echo '<p> User Password:'; 
+ echo $userlist[1]['Password'];
+ echo '</p>';
+
+ echo '<p> User Email:'; 
+ echo $userlist[1]['Email'];
+ echo '</p>';
 
 
-                      <!--  <tr>
-                        <tr>
-                            <td>DATA HERE</td>
-                            <td>DATA HERE</td>
-                            <td>DATA HERE</td>
-                            <td>DATA HERE</td>
-                            <td><a href='./edit-product.php' class='btn-edit'><span class='material-symbols-outlined'>
-                                        edit
-                                    </span></a><a href='' class='btn-remove'><span class='material-symbols-outlined'>
-                                        delete
-                                    </span></a></td>
-                        </tr>
-                        </tr>
-                        
-                        -->
+ echo '<p> Is Admin: '; 
+ echo $userlist[1]['IsAdmin'];
+ echo '</p>';
 
-                        <?php
-                            foreach ($userlist as $key => $userlist[1]){
+ 
 
-                                echo '<tr>';
-                                echo '<tr>';
+// GEGE LODS
 
-                                    echo '<td>';
-                                    echo $userlist[1]["ID"]; 
 
-                                    echo '</td>';
+echo '       </div>
+                    
+                </div>
 
-                                    echo '<td>';
-                                    echo $userlist[1]["Name"]; 
-                                    echo '</td>';
-
-                                    echo '<td>';
-                                    echo $userlist[1]["Description"]; 
-                                    echo '</td>';
-
-                                    echo '<td>';
-                                    echo $userlist[1]["Price"]; 
-                                    echo '</td>';
-
-                                    echo '<td>';
-                                    echo $userlist[1]["quantity"]; 
-                                    echo '</td>';
-
-                                    echo "<td><a href='./edit-product.php' class='btn-edit'><span class='material-symbols-outlined'>
-                                        edit
-                                    </span></a><a href='product-delete.php' class='btn-remove'><span class='material-symbols-outlined'>
-                                        delete
-                                    </span></a></td>";
-
-                                echo '</tr>';
-                                echo '</tr>';
-
-                            }
-                        ?>
-
-                    </tbody>
-                </table>
+                    
             </div>
         </div>
     </div>
 </body>
 
 </html>
+';
+
+
+
+
+
+$conn->close();
+
+
+ }else{
+	$_SESSION['step'] = 1;
+	header('Location: http://localhost/Golden_Sinilog/index.php');
+	exit();
+
+ }
+
+
+
+
+ ?>
+
+
+
+
+                           
+
+              
