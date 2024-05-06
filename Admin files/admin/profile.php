@@ -32,39 +32,20 @@ foreach ($userlist as $key => $userlist[1]){
 	if($userlist[1]["FirstName"] == $_COOKIE['FirstName']){	
 		if($userlist[1]['LastName'] == $_COOKIE['LastName']){
 			$connection_passed = 1;
+
+			$userInfo = $userlist;
+			break;
 		}
 	}
 }
 
-$userInfo = $userlist[1];
-
-
-$conn->close();
 
 
 
  if($connection_passed == 1){
 
 
-
-
-
-
-
-
- }else{
-	$_SESSION['step'] = 1;
-	header('Location: http://localhost/Golden_Sinilog/index.php');
-	exit();
-
- }
-
-
- ?>
-
-
-
-<!DOCTYPE html>
+echo '<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -77,8 +58,10 @@ $conn->close();
 </head>
 
 <body>
-
-	<?php include 'sidebar-profile.php' ?>
+';
+	include 'sidebar-profile.php';
+ 
+echo '
     <div class="test">
         <header>
             <h2>
@@ -97,11 +80,37 @@ $conn->close();
                 <h3>Profile Page</h3>
                 <div class="flex-row">
                     <div class="flex-row">
-                        <div class="s">
-                            <p>User ID: <?php $userInfo['FirstName'];?> </p>
-                            <p>User First Name: </p>
+                        <div class="s"> <p>User ID: ';
+// DITO GAWA CODE 
 
-                    </div>
+ echo $userlist[1]["ID"];
+ echo '</p>';
+
+ echo '<p> User Name:'; 
+ echo $userlist[1]['FirstName'];
+ echo ' ';
+ echo $userlist[1]['LastName'];
+ echo '</p>';
+
+ echo '<p> User Password:'; 
+ echo $userlist[1]['Password'];
+ echo '</p>';
+
+ echo '<p> User Email:'; 
+ echo $userlist[1]['Email'];
+ echo '</p>';
+
+
+ echo '<p> Is Admin: '; 
+ echo $userlist[1]['IsAdmin'];
+ echo '</p>';
+
+ 
+
+// GEGE LODS
+
+
+echo '       </div>
                     
                 </div>
 
@@ -112,3 +121,30 @@ $conn->close();
 </body>
 
 </html>
+';
+
+
+
+
+
+$conn->close();
+
+
+ }else{
+	$_SESSION['step'] = 1;
+	header('Location: http://localhost/Golden_Sinilog/index.php');
+	exit();
+
+ }
+
+
+
+
+ ?>
+
+
+
+
+                           
+
+              

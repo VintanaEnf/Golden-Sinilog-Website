@@ -49,6 +49,22 @@
 
           </li>
 
+          <?php 
+
+          if($userlist[1]['IsAdmin'] == 1){
+            echo'<li>
+
+              <a href="../admin/products.php"
+                ><span class="material-symbols-outlined">list</span>
+                <span>Admin Page</span></a
+              >
+
+            </li>
+            ';
+          };
+          ?>
+
+
 
         </ul>
         <hr color="grey" />
