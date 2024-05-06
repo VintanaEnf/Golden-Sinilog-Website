@@ -36,6 +36,9 @@ foreach ($userlist as $key => $userlist[1]){
 	}
 }
 
+$userInfo = $userlist[1];
+
+
 $conn->close();
 
 
@@ -74,6 +77,8 @@ $conn->close();
 </head>
 
 <body>
+
+	<?php include 'sidebar-profile.php' ?>
     <div class="test">
         <header>
             <h2>
@@ -89,80 +94,18 @@ $conn->close();
     <div class="main-content">
         <div class="main2">
             <div class="products-panel">
-                <h3>Products</h3>
-                <a href="../admin/add-product.php" class="button-24">New Product</a>
-                <br>
-                <table class="projected-tbl">
-                    <thead style="width: 100%;">
-                        <tr>
-                            <th>Product ID</th>
-                            <th>Product Name</th>
-                            <th>Product Desc</th>
-                            <th>Product Price</th>
-                            <th>Product Quantity</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody style="width: 100%;">
+                <h3>Profile Page</h3>
+                <div class="flex-row">
+                    <div class="flex-row">
+                        <div class="s">
+                            <p>User ID: <?php $userInfo['FirstName'];?> </p>
+                            <p>User First Name: </p>
 
+                    </div>
+                    
+                </div>
 
-                      <!--  <tr>
-                        <tr>
-                            <td>DATA HERE</td>
-                            <td>DATA HERE</td>
-                            <td>DATA HERE</td>
-                            <td>DATA HERE</td>
-                            <td><a href='./edit-product.php' class='btn-edit'><span class='material-symbols-outlined'>
-                                        edit
-                                    </span></a><a href='' class='btn-remove'><span class='material-symbols-outlined'>
-                                        delete
-                                    </span></a></td>
-                        </tr>
-                        </tr>
-                        
-                        -->
-
-                        <?php
-                            foreach ($userlist as $key => $userlist[1]){
-
-                                echo '<tr>';
-                                echo '<tr>';
-
-                                    echo '<td>';
-                                    echo $userlist[1]["ID"]; 
-
-                                    echo '</td>';
-
-                                    echo '<td>';
-                                    echo $userlist[1]["Name"]; 
-                                    echo '</td>';
-
-                                    echo '<td>';
-                                    echo $userlist[1]["Description"]; 
-                                    echo '</td>';
-
-                                    echo '<td>';
-                                    echo $userlist[1]["Price"]; 
-                                    echo '</td>';
-
-                                    echo '<td>';
-                                    echo $userlist[1]["quantity"]; 
-                                    echo '</td>';
-
-                                    echo "<td><a href='./edit-product.php' class='btn-edit'><span class='material-symbols-outlined'>
-                                        edit
-                                    </span></a><a href='product-delete.php' class='btn-remove'><span class='material-symbols-outlined'>
-                                        delete
-                                    </span></a></td>";
-
-                                echo '</tr>';
-                                echo '</tr>';
-
-                            }
-                        ?>
-
-                    </tbody>
-                </table>
+                    
             </div>
         </div>
     </div>
