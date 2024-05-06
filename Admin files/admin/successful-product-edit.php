@@ -21,6 +21,12 @@ $image = $_POST['image'];
 $prod_quantity = $_POST['prod_quantity'];
 $prod_price = $_POST['prod_price'];
 
+echo "Product ID: " . $prod_id . "<br>";
+echo "Product Name: " . $prod_name . "<br>";
+echo "Product Description: " . $prod_desc . "<br>";
+echo "Image: " . $image . "<br>";
+echo "Product Quantity: " . $prod_quantity . "<br>";
+echo "Product Price: " . $prod_price . "<br>";
 
 $foodidsql = "UPDATE foods SET Name = ?, Description = ?, ImagePath = ?, quantity = ?, Price = ? WHERE 1 and ID = ?	"; 
 
@@ -28,7 +34,7 @@ $foodidsql = "UPDATE foods SET Name = ?, Description = ?, ImagePath = ?, quantit
 $stmt = $conn->prepare($foodidsql);
 
 
-$stmt->bind_param('sssiii', $prod_name_sql, $prod_desc_sql, $image_sql, $prod_quantity_sql, $prod_price_sql, $prod_id);
+$stmt->bind_param('isssdi', $prod_id_sql, $prod_name_sql, $prod_desc_sql, $image_sql, $prod_quantity_sql, $prod_price_sql);
 
 //$stmt->bind_param('ssi', $prod_name_sql, $prod_desc_sql, $prod_id);
 
