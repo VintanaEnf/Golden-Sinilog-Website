@@ -1,4 +1,12 @@
-<?php setcookie("loggedin", 0);?>
+<?php 
+
+if(isset($_COOKIE["loggedin"])){
+    
+}
+else{
+ setcookie("loggedin", 0);
+
+};?>
 
 <html>
 
