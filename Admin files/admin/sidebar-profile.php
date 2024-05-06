@@ -70,7 +70,7 @@
         <hr color="grey" />
         <ul>
           <li>
-            <a href=""
+            <a href="../../logout.php"
               ><span class="material-symbols-outlined">logout</span>
               <span span>Logout</span></a
             >
