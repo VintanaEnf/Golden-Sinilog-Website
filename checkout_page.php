@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout Page</title>
+    <title>Golden Sinilog | Checkout Page</title>
 </head>
 
 <body>
@@ -56,21 +56,21 @@
     </script>
     <?php include './navbar.php'; ?>
 
-    <form action="order_success_page.php">
+    <form style="text-align: center;" action="order_success_page.php">
         <div class="main-cont">
             <div class="main">
                 <div class="checkout">
                     <div class="cart-details">
-                        <h4>Payment</h4>
-                        <h6>Gcash Payment</h6>
+                        <h1 style="text-align: center;">Payment Form</h1>
+                        <img src="./IMAGES/gcash.png" style="text-align: center;" alt="qr code" width="100px">
                         <div class="qr-code">
-                            <p>Pay the amount to this account (09XXXXXXXXX) </p>
-                            <img src="./IMAGES/qr-code-example.JPG" alt="qr code" width="200px">
+                            <p style="text-align: center;">Pay the amount to this account (09XXXXXXXXX) </p>
+                            <img src="./IMAGES/QR-demonstration.png" style="text-align: center;" alt="qr code" width="200px">
                         </div>
                         <h6 id="refTitle">Reference ID</h6>
                         <input type="text" name="pRef" id="refID" placeholder="13 Digit GCash Ref. No." minlength="13" maxlength="13" class="input-field" required>
                         <br>
-                        <a href="../user/cart-details.php" class="back">Go Back</a>
+                        <a href="cart_page.php" class="back">Go Back</a>
                         <input type="submit" value="Place Order" name="order" class="submit-btn">
 
                     </div>

@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>Golden Sinilog Sign in</title>
+  <title>Golden Sinilog | Sign in</title>
 
   <link rel="icon" type="images/x-icon" href="./IMAGES/general/Gred.png" />
   <link rel="stylesheet" type="text/css" href="./CSS/saimon_css.css" />

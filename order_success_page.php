@@ -48,7 +48,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./CSS/home.css">
-    <title>Order Successful</title>
+    <link rel="icon" type="images/x-icon" href="./IMAGES/general/Gred.png">
+    <title>Golden Sinilog | Thank you!</title>
 </head>
 
 <body>
@@ -113,6 +114,16 @@ if ($resultuser->num_rows > 0) {
 }
 
 
+
+
+
+
+if ($_COOKIE['FirstName'] == null){
+    header('Location: http://localhost/golden-sinilog-website/SignIn.php');
+    exit();
+}
+
+
 foreach ($userlist as $key => $userlist[1]){
 
     if($userlist[1]["FirstName"] == $_COOKIE['FirstName']){ 
@@ -126,31 +137,72 @@ foreach ($userlist as $key => $userlist[1]){
 }
 
 
+    $sqlfoodquantity = "SELECT * FROM foods Where 1";
+    $sqlfoodresult = $conn->query($sqlfoodquantity);
+
+    $sqlquantitylist = array();
+        
+
+    while($row = $sqlfoodresult->fetch_assoc()) {
+            array_push($sqlquantitylist, $row);
+    }
+
+
+
 if($_COOKIE['FirstName'] == $userlist[1]['FirstName'] and $_COOKIE['LastName'] == $userlist[1]['LastName']){
     $useridsql = $userlist[1]["ID"];
 }
-
+$purchaseditemssql = "";
 foreach ($cartItems as $item) {
+
+    $foodidsql = "UPDATE foods SET quantity = ? WHERE ID = ?";
+    $stmtfood = $conn->prepare($foodidsql);
+    $stmtfood->bind_param('ii', $foodidquantitysql, $foodididsql);
+
+
+    $cartitemid = (int) $item['true_id'];
+
+
+
     $num1 = (int) $item['quantity'];
 
     $num2 = (int) $item['price'];
 
+    
+    foreach ($sqlquantitylist as $key => $sqlquantitylist[1]){
+        if($sqlquantitylist[1]["ID"]   == $cartitemid){
+            $foodididsql = $cartitemid;
+            $foodidquantitysql = $sqlquantitylist[1]["quantity"] - $num1;    
+            
+            echo "<br>";        echo "<br>";        echo "<br>";echo "<br>";
+            echo $foodidquantitysql;
+            echo "</br>";echo "</br>";echo "</br>";echo "</br>";
+            
+            $stmtfood->execute();
+        }
+    }
+
+
+
 //    $totalamountsql += (int) $item['quantity' * (int) $item['price']];
     $totalamountsql += $num1 * $num2;
 
-    $purchaseditemssql = $item['product_id'] . "| quantity: " . $item['quantity'] . "| Money paid: " . $totalamountsql;
+    $purchaseditemssql = $purchaseditemssql . " 
+    " . $item['product_id'] . "| quantity: " . $item['quantity'] . "| Price: " . $item['price'];
+
 
 };
+
 
 
 
 //$TransactionDatesql = "Today is " . date('Y-m-d H:i:s') . "<br>";
 
 $stmt->execute();
-
 echo "RECORDED: " . $stmt->affected_rows;
 
 $stmt->close();
+$stmtfood->close();
 $conn->close(); 
 $_SESSION['step'] = 1;
 //header('Location: http://localhost/golden-sinilog-website/checkout_page.php');

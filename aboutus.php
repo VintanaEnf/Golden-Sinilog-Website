@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Golden Sinilog About Us</title>
+    <title>Golden Sinilog | About Us</title>
 
     <link rel="icon" type="images/x-icon" href="./IMAGES/general/Gred.png">
     <link rel="stylesheet" type="text/css" href="./CSS/jm_css.css">

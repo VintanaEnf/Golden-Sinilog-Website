@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <title>My Cart</title>
+    <title>Golden Sinilog | Cart</title>
 </head>
 
 <body>
@@ -30,7 +30,7 @@
         </div>
         <div class="cart-container">
             <table>
-                <thead>
+                <thead style="background-color: #BB0000">
                     <th>Food Name</th>
                     <th>Price</th>
                     <th>Quantity</th>

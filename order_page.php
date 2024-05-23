@@ -1,3 +1,17 @@
+
+<?php 
+
+if($_COOKIE["loggedin"]){
+    
+}else{
+    $_SESSION['step'] = 1;
+    header('Location: http://localhost/golden-sinilog-website/SignIn.php');
+    exit();
+}
+;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +24,7 @@
     <link rel="stylesheet" href="./CSS/order_page.css">
     <link rel="icon" type="images/x-icon" href="./IMAGES/general/Gred.png">
     <link rel="stylesheet" href="./CSS/home.css">
-    <title>Order Page</title>
+    <title>Golden Sinilog | Order Page</title>
 </head>
 
 <body>

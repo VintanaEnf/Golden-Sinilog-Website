@@ -26,71 +26,48 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-
+$useriddd = 0;
 foreach ($userlist as $key => $userlist[1]){
 
 	if($userlist[1]["FirstName"] == $_COOKIE['FirstName']){	
 		if($userlist[1]['LastName'] == $_COOKIE['LastName']){
 			$connection_passed = 1;
-            $userInfo = $userlist;
+            $useriddd = $userlist[1]['ID'];
             break;
 		}
 	}
 }
 
+$sqltransactionlist = "";
 
-$sqltransaction = "SELECT * FROM transactions WHERE 1";
-$transresult = $conn->query($sqltransaction);
+$sqltransID = "";
 
-if ($transresult->num_rows > 0) {
-    $transactionlist = array();
-    
+$sqltransUserID = "";
 
-    while($row = $transresult->fetch_assoc()) {
-        array_push($transactionlist, $row);
+$sqltransTransactionDate = "";
 
-    }
-} else {
-    echo "0 results";
-}
+$sqltransTotalAmount = "";
 
-echo $transactionlist;
+$sqltransPurchasedItems = "";
 
-echo $transactionlist;
-echo $transactionlist;
-echo $transactionlist;
-echo $transactionlist;
-echo $transactionlist;
-echo $transactionlist;
-echo $transactionlist;
-echo $transactionlist;
-echo $transactionlist;
-echo $transactionlist;
-print_r($transactionlist);
-$conn->close();
+
+$sqltransaction = "SELECT * FROM transactions WHERE 1 AND UserID = ?";
+$stmt = $conn->prepare($sqltransaction);
+
+$stmt->bind_param("i", $useriddd);
+
+$stmt->execute();
+
+$stmt->bind_result($sqltransID, $sqltransUserID, $sqltransTransactionDate, $sqltransTotalAmount, $sqltransPurchasedItems );
+
+
+
 
 
 
  if($connection_passed == 1){
 
-
-
-
-
-
-
-
- }else{
-	$_SESSION['step'] = 1;
-	header('Location: http://localhost/Golden_Sinilog/index.php');
-	exit();
-
- }
-
-
- ?>
-
-
+echo'
 
 <!DOCTYPE html>
 <html lang="en">
@@ -101,19 +78,24 @@ $conn->close();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transactions</title>
+    <link rel="icon" type="images/x-icon" href="./../../IMAGES/general/Gred.png">
+    <title>Golden Sinilog | Transactions</title>
 </head>
 
 <body>
+    ';
+    
 
-	<?php include 'sidebar-profile.php' ?>
+    include 'sidebar-profile.php';
+
+    echo '
     <div class="test">
         <header>
             <h2>
                 <label for="">
                     <span class="material-symbols-outlined">menu</span>
                 </label>
-                Transactions
+                User Transactions
             </h2>
 
         </header>
@@ -137,47 +119,34 @@ $conn->close();
                     <tbody style="width: 100%;">
 
 
-                      <!--  <tr>
-                        <tr>
-                            <td>DATA HERE</td>
-                            <td>DATA HERE</td>
-                            <td>DATA HERE</td>
-                            <td>DATA HERE</td>
-                            <td><a href='./edit-product.php' class='btn-edit'><span class='material-symbols-outlined'>
-                                        edit
-                                    </span></a><a href='' class='btn-remove'><span class='material-symbols-outlined'>
-                                        delete
-                                    </span></a></td>
-                        </tr>
-                        </tr>
+                    
                         
-                        -->
+                    ';
+                        
+                            while($stmt->fetch()){
 
-                        <?php
-                            foreach ($userlist as $key => $userlist[1]){
 
-                                echo '<tr>';
-                                echo '<tr>';
+                                    echo '<tr>';
+                                    echo '<tr>';
 
                                     echo '<td>';
-                                    echo $transactionlist[1]["ID"]; 
-
+                                    echo $sqltransID; 
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $transactionlist[1]["UserID"]; 
+                                    echo $sqltransUserID; 
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $transactionlist[1]["TransacionDate"]; 
+                                    echo $sqltransTransactionDate; 
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $transactionlist[1]["TotalAmount"]; 
+                                    echo $sqltransTotalAmount; 
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $transactionlist[1]["PurchasedItems"]; 
+                                    echo $sqltransPurchasedItems; 
                                     echo '</td>';
 
                                   
@@ -185,7 +154,7 @@ $conn->close();
                                 echo '</tr>';
 
                             }
-                        ?>
+                        echo '
 
                     </tbody>
                 </table>
@@ -194,4 +163,26 @@ $conn->close();
     </div>
 </body>
 
-</html>
+</html>';
+
+
+
+
+
+
+
+
+$conn->close();
+
+ }else{
+	$_SESSION['step'] = 1;
+	header('Location: http://localhost/Golden_Sinilog/index.php');
+	exit();
+
+ }
+
+
+ ?>
+
+
+

@@ -28,13 +28,17 @@ echo "Image: " . $image . "<br>";
 echo "Product Quantity: " . $prod_quantity . "<br>";
 echo "Product Price: " . $prod_price . "<br>";
 
-$foodidsql = "UPDATE foods SET Name = ?, Description = ?, ImagePath = ?, quantity = ?, Price = ? WHERE 1 and ID = ?	"; 
+// $foodidsql = "UPDATE foods SET Name = ?, Description = ?, ImagePath = ?, quantity = ?, Price = ? WHERE 1 and ID = ?	"; 
 
-//$foodidsql = "UPDATE foods SET NAME = ? , Description = ? WHERE 1 and ID = ?";
+// //$foodidsql = "UPDATE foods SET NAME = ? , Description = ? WHERE 1 and ID = ?";
+// $stmt = $conn->prepare($foodidsql);
+
+
+// $stmt->bind_param('isssdi', $prod_id_sql, $prod_name_sql, $prod_desc_sql, $image_sql, $prod_quantity_sql, $prod_price_sql);
+
+$foodidsql = "UPDATE foods SET Name = ?, Description = ?, ImagePath = ?, quantity = ?, Price = ? WHERE ID = ?";
 $stmt = $conn->prepare($foodidsql);
-
-
-$stmt->bind_param('isssdi', $prod_id_sql, $prod_name_sql, $prod_desc_sql, $image_sql, $prod_quantity_sql, $prod_price_sql);
+$stmt->bind_param('sssidi', $prod_name, $prod_desc, $image, $prod_quantity, $prod_price, $prod_id);
 
 //$stmt->bind_param('ssi', $prod_name_sql, $prod_desc_sql, $prod_id);
 

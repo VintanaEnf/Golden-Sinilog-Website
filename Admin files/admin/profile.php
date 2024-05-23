@@ -54,7 +54,8 @@ echo '<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products</title>
+    <link rel="icon" type="images/x-icon" href="./../../IMAGES/general/Gred.png">
+    <title>Golden Sinilog | Profile</title>
 </head>
 
 <body>
@@ -68,7 +69,7 @@ echo '
                 <label for="">
                     <span class="material-symbols-outlined">menu</span>
                 </label>
-                Product Management
+                User Profile Page
             </h2>
 
         </header>
@@ -80,30 +81,24 @@ echo '
                 <h3>Profile Page</h3>
                 <div class="flex-row">
                     <div class="flex-row">
-                        <div class="s"> <p>User ID: ';
+                        <div class="s">';
 // DITO GAWA CODE 
 
- echo $userlist[1]["ID"];
- echo '</p>';
-
- echo '<p> User Name:'; 
+ echo '<p> User Name:   <i>'; 
  echo $userlist[1]['FirstName'];
  echo ' ';
  echo $userlist[1]['LastName'];
- echo '</p>';
+ echo '</i></p>';
 
- echo '<p> User Password:'; 
- echo $userlist[1]['Password'];
- echo '</p>';
 
- echo '<p> User Email:'; 
+ echo '<p> User Email:   <i>'; 
  echo $userlist[1]['Email'];
- echo '</p>';
+ echo '</i></p>';
 
 
- echo '<p> Is Admin: '; 
- echo $userlist[1]['IsAdmin'];
- echo '</p>';
+//  echo '<p> Is Admin: '; 
+//  echo $userlist[1]['IsAdmin'];
+//  echo '</p>';
 
  
 

@@ -1,5 +1,5 @@
+<?php 
 
-<?php
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM users";
+$sql = "SELECT * FROM users WHERE 1";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -23,16 +23,51 @@ if ($result->num_rows > 0) {
         array_push($userlist, $row);
 
     }
-    //print_r($userlist[1]["ID"]);
-
-    //erase this line pag nagets na, for explanation lang to.
-    //print_r($userlist);
 } else {
     echo "0 results";
 }
+$useriddd = 0;
+foreach ($userlist as $key => $userlist[1]){
 
-$conn->close();
-?>
+	if($userlist[1]["FirstName"] == $_COOKIE['FirstName']){	
+		if($userlist[1]['LastName'] == $_COOKIE['LastName']){
+			$connection_passed = 1;
+            $useriddd = $userlist[1]['ID'];
+            break;
+		}
+	}
+}
+
+$sqltransactionlist = "";
+
+$sqltransID = "";
+
+$sqltransUserID = "";
+
+$sqltransTransactionDate = "";
+
+$sqltransTotalAmount = "";
+
+$sqltransPurchasedItems = "";
+
+
+$sqltransaction = "SELECT * FROM transactions WHERE 1";
+$stmt = $conn->prepare($sqltransaction);
+
+//$stmt->bind_param("i", $useriddd);
+
+$stmt->execute();
+
+$stmt->bind_result($sqltransID, $sqltransUserID, $sqltransTransactionDate, $sqltransTotalAmount, $sqltransPurchasedItems );
+
+
+
+
+
+
+ if($connection_passed == 1){
+
+echo'
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,23 +75,28 @@ $conn->close();
 <head>
     <link rel="stylesheet" href="../table-css.css">
     <link rel="stylesheet" href="../admin/products.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="images/x-icon" href="./../../IMAGES/general/Gred.png">
-    <title>Admin Page | Users</title>
+    <title>Golden Sinilog | Transactions</title>
 </head>
 
 <body>
-    <?php
+    ';
+    
+
+    // include 'sidebar-profile.php';
     include '../admin/sidebar.html';
 
-    ?>
+    echo '
     <div class="test">
         <header>
             <h2>
                 <label for="">
                     <span class="material-symbols-outlined">menu</span>
                 </label>
-                Users Accounts Management
+                Admin Transactions
             </h2>
 
         </header>
@@ -65,68 +105,58 @@ $conn->close();
     <div class="main-content">
         <div class="main2">
             <div class="products-panel">
-                <h3>Users</h3>
-                <a href="../admin/add-user.php" class="button-24">New Users</a>
-                <!--<a href="../admin/add-product.php" class="button-24">Remove Admin</a> -->
+                <h3>Transaction Table</h3>
                 <br>
                 <table class="projected-tbl">
                     <thead style="width: 100%;">
                         <tr>
+                            <th>Transaction ID</th>
                             <th>User ID</th>
-                            <th>User FirstName</th>
-                            <th>User LastName</th>
-                            <th>User Email</th>
-                            <th>User Password</th>
-                            <th>User IsAdmin</th>
-                            <th>Action</th>
+                            <th>Transaction Date</th>
+                            <th>Total Amount</th>
+                            <th>Purchased Items</th>
                         </tr>
                     </thead>
                     <tbody style="width: 100%;">
-                        <tr>
-                        <?php
-                            foreach ($userlist as $key => $userlist[1]){
 
-                                echo '<tr>';
-                                echo '<tr>';
+
+                    
+                        
+                    ';
+                        
+                            while($stmt->fetch()){
+
+
+                                    echo '<tr>';
+                                    echo '<tr>';
 
                                     echo '<td>';
-                                    echo $userlist[1]["ID"]; 
-
+                                    echo $sqltransID; 
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $userlist[1]["FirstName"]; 
+                                    echo $sqltransUserID; 
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $userlist[1]["LastName"]; 
+                                    echo $sqltransTransactionDate; 
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $userlist[1]["Email"]; 
+                                    echo $sqltransTotalAmount; 
                                     echo '</td>';
 
                                     echo '<td>';
-                                    echo $userlist[1]["Password"]; 
+                                    echo $sqltransPurchasedItems; 
                                     echo '</td>';
 
-                                    echo '<td>';
-                                    echo $userlist[1]["IsAdmin"]; 
-                                    echo '</td>';
-
-                                    echo "<td><a href='./edit-user.php' class='btn-edit'><span class='material-symbols-outlined'>
-                                        edit
-                                    </span></a><a href='user-delete.php' class='btn-remove'><span class='material-symbols-outlined'>
-                                        delete
-                                    </span></a></td>";
-
+                                  
                                 echo '</tr>';
                                 echo '</tr>';
 
                             }
-                        ?>
+                        echo '
 
-                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -134,4 +164,26 @@ $conn->close();
     </div>
 </body>
 
-</html>
+</html>';
+
+
+
+
+
+
+
+
+$conn->close();
+
+ }else{
+	$_SESSION['step'] = 1;
+	header('Location: http://localhost/Golden_Sinilog/index.php');
+	exit();
+
+ }
+
+
+ ?>
+
+
+

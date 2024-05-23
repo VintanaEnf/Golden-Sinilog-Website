@@ -59,6 +59,7 @@
 								} else {
 									echo "No user found.";
 									echo '<br><br><button>Retry</button>';
+
 								}
 							}
 							header("Location: index.php");
@@ -68,7 +69,7 @@
 						// 	echo json_encode(array('status' => 'error', 'message' => 'Invalid username or password'
 						// ));
 							echo 'Invalid username or password.';
-							echo '<br><br><button onclick="window.location.href=\'index.php\';">Retry</button>';
+							echo '<br><br><button onclick="window.location.href=\'SignIn.php\';">Retry</button>';
 								setcookie("loggedin", 0);
 								setcookie("FirstName", "");
 								setcookie("LastName", "");

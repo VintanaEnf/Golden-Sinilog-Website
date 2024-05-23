@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Golden Sinilog Privacy Policy</title>
+        <title>Golden Sinilog | Privacy Policy</title>
         <link rel="icon" type="images/x-icon" href="./IMAGES/general/Gred.png">
         <link rel = "stylesheet" href = "./CSS/home.css">
         <?php include 'css.php' ?>

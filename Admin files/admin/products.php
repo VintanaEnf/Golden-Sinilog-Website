@@ -43,7 +43,8 @@ $conn->close();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products</title>
+    <link rel="icon" type="images/x-icon" href="./../../IMAGES/general/Gred.png">
+    <title>Admin Page | All Products</title>
 </head>
 
 <body>
